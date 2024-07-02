@@ -8,12 +8,16 @@
       {
         "src": "public/**/*",
         "use": "@vercel/static"
+      },
+      {
+        "src": "src/**/*",
+        "use": "@vercel/static"
       }
     ],
     "routes": [
       {
         "src": "/api/(.*)",
-        "dest": "api/bubbles.py"
+        "dest": "/api/bubbles.py"
       },
       {
         "src": "/(.*)",
