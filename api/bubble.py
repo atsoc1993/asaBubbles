@@ -32,6 +32,7 @@ def fetch_all_balances(asset_id, decimals):
 
 @app.route('/api/holdings')
 def get_holdings():
+
     token_id = request.args.get('token_id')
     asset_info = algod_client.asset_info(int(token_id))
     decimals = 10 ** asset_info['params']['decimals']
