@@ -16,6 +16,7 @@ function App() {
         axios.get(`https://asa-bubbles.vercel.app/api/holdings?token_id=${tokenId}`)
             .then(response => {
                 setData(response.data);
+                console.log(response.data);
                 setTokenName(response.data.tokenName);
                 setTotalHolders(response.data.totalHolders);
                 setIsLoading(false);
