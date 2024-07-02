@@ -13,7 +13,7 @@ function App() {
     const fetchData = () => {
         if (!tokenId) return;
         setIsLoading(true);
-        axios.get(`http://localhost:5000/api/holdings?token_id=${tokenId}`)
+        axios.get(`https://asa-bubbles.vercel.app/api/holdings?token_id=${tokenId}`)
             .then(response => {
                 setData(response.data);
                 setTokenName(response.data.tokenName);
