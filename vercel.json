@@ -11,6 +11,12 @@
         "src": "/api/(.*)",
         "dest": "/api/bubbles.py"
       }
+    ],
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/"
+      }
     ]
   }
   
